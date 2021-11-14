@@ -1,30 +1,8 @@
-Check helm template and use kubectl diff server side (the default) to see differences: `helm template --is-upgrade --no-hooks --skip-crds foo --set resources.requests.cpu=210m . | kubectl diff  --server-side=true -f -`{{execute}}.
+Check helm template and use kubectl diff server side (the default) to see differences: `helm template --is-upgrade --no-hooks --skip-crds foo --set replicaCount=2 . | kubectl diff  --server-side=true -f -`{{execute}}.
 
 You will see something like this:
 
-```diff
--        resources: {}
-+        resources:
-+          requests:
-+            cpu: 210m
 ```
-
-but also lots of 
-
-```diff
-+  - apiVersion: apps/v1
-+    fieldsType: FieldsV1
-+    fieldsV1:
-+      f:spec:
-+        f:template:
-+          f:spec:
-+            f:containers:
-+              k:{"name":"foo"}:
-+                f:resources:
-+                  f:requests:
-+                    .: {}
-+                    f:cpu: {}
-+    manager: kubectl-client-side-apply
-+    operation: Update
-+    time: "2021-11-14T06:18:27Z"
+W1114 08:06:35.333875    4789 diff.go:544] Object (apps/v1, Kind=Deployment: foo) keeps changing, diffing without lock
+Error from server (Conflict): Apply failed with 1 conflict: conflict with "helm" using apps/v1: .spec.replicas
 ```

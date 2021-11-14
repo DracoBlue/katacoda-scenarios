@@ -1,6 +1,6 @@
 Install kubernetes with k3s via `curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.20.12+k3s1 sh -`{{execute}}.
 
-Check if it is properly running with `kubectl get nodes`{{execute}}
+Check if it is properly running with `kubectl get nodes`{{execute}} (should answer `host01   Ready`).
 
 Show kubernetes versions via `kubectl version`{{execute}}
 
