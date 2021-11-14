@@ -6,32 +6,28 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Install k8s and helm",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Create and install helm chart",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Use helm diff",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Use helm template dry run and apply kubectl client side",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Use helm template dry run and apply kubectl server side (the default)",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Use helm upgrade yaml output and apply raw template with kubectl server side",
         "text": "step6.md"
-      },
-      {
-        "title": "Step 7",
-        "text": "step7.md"
       }
     ],
     "intro": {
@@ -45,6 +41,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "ubuntu:2004"
   }
 }
