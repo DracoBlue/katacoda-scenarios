@@ -26,7 +26,7 @@
         "text": "step5.md"
       },
       {
-        "title": "Use helm upgrade yaml output and apply raw template with kubectl server side",
+        "title": "Use helm upgrade yaml output and apply raw template with kubectl client side",
         "text": "step6.md"
       }
     ],
